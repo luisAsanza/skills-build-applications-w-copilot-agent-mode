@@ -1,6 +1,4 @@
 from djongo import models
-
-from djongo import models
 from djongo.models import ObjectIdField
 from bson import ObjectId
 
