@@ -2,7 +2,10 @@ import React, { useEffect, useState } from 'react';
 
 const Users = () => {
   const [data, setData] = useState([]);
-  const endpoint = `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/users/`;
+  const baseUrl = process.env.REACT_APP_CODESPACE_NAME 
+    ? `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev`
+    : 'http://localhost:8000';
+  const endpoint = `${baseUrl}/api/users/`;
 
   useEffect(() => {
     fetch(endpoint)
