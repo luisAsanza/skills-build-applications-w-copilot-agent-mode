@@ -1,5 +1,5 @@
 
-
+import './App.css';
 import { Routes, Route, Link } from 'react-router-dom';
 import Activities from './components/Activities';
 import Leaderboard from './components/Leaderboard';
