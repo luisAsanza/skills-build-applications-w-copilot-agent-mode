@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { getApiBaseUrl } from '../utils/api';
 
 const Activities = () => {
   const [data, setData] = useState([]);
-  const endpoint = `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/activities/`;
+  const endpoint = `${getApiBaseUrl()}/api/activities/`;
 
   useEffect(() => {
     fetch(endpoint)
