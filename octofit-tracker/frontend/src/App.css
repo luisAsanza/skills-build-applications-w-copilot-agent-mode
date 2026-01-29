@@ -1,0 +1,167 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+  color: #222b45;
+  min-height: 100vh;
+}
+
+/* App container */
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 16px 16px 16px;
+  background: rgba(255,255,255,0.95);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08);
+}
+
+/* Navigation styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, #0f2027 0%, #2c5364 100%);
+  padding: 0 24px;
+  height: 64px;
+  border-radius: 0 0 12px 12px;
+  margin-bottom: 32px;
+}
+.navbar-logo {
+  height: 44px;
+  margin-right: 24px;
+}
+.navbar-links {
+  display: flex;
+  gap: 24px;
+}
+.navbar-links a {
+  color: #f7b731;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+.navbar-links a:hover {
+  color: #fff;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #0f2027;
+  letter-spacing: 1px;
+}
+h1 {
+  color: #f7b731;
+  font-size: 2.5rem;
+  margin-bottom: 0.5em;
+}
+h2 {
+  color: #2c5364;
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0;
+  background: #f7fafc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px 0 rgba(44,83,100,0.08);
+}
+th, td {
+  padding: 14px 18px;
+  text-align: left;
+}
+th {
+  background: #2c5364;
+  color: #fff;
+  font-weight: 700;
+}
+tr:nth-child(even) {
+  background: #e0eafc;
+}
+tr:hover {
+  background: #f7b73122;
+}
+
+/* Buttons */
+button, .btn {
+  background: linear-gradient(90deg, #f7b731 0%, #ff6a00 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 rgba(44,83,100,0.08);
+  transition: background 0.2s, transform 0.1s;
+}
+button:hover, .btn:hover {
+  background: linear-gradient(90deg, #ff6a00 0%, #f7b731 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* Links */
+a {
+  color: #2c5364;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #f7b731;
+}
+
+/* Logo image style */
+.octofit-logo {
+  height: 44px;
+  margin-right: 18px;
+  vertical-align: middle;
+}
+
+/* Utility classes */
+.center {
+  text-align: center;
+}
+.mt-2 {
+  margin-top: 16px;
+}
+.mb-2 {
+  margin-bottom: 16px;
+}
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px 0 rgba(44,83,100,0.08);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
