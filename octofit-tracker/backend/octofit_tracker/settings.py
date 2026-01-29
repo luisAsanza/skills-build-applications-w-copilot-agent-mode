@@ -19,13 +19,23 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-i0%@f0igq&ozy#7^77*s9wdi^oyz+6v4*z&^y2=ffq8+8-so4$'
+import os
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# Default to DEBUG on (True) to preserve existing development behavior.
+DEBUG = os.environ.get('DJANGO_DEBUG', '1') == '1'
 
-import os
+# SECURITY WARNING: keep the secret key used in production secret!
+if DEBUG:
+    # In development, allow a default insecure secret key for convenience.
+    # Do NOT use this fallback in production; set DJANGO_SECRET_KEY instead.
+    SECRET_KEY = os.environ.get(
+        'DJANGO_SECRET_KEY',
+        'django-insecure-dev-only-octofit-tracker-secret-key',
+    )
+else:
+    # In production, require the secret key to be provided via environment.
+    SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
 
 # Support Codespace and localhost
 CODESPACE_NAME = os.environ.get('CODESPACE_NAME')
